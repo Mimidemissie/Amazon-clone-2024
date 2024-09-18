@@ -1,10 +1,15 @@
 import React from "react";
 import classes from "./Header.module.css";
-
+import { Link } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import LowerHeader from "./LowerHeader";
 import { BiCart } from "react-icons/bi";
+//import Landing from "./Pages/Landing/Landing";
+//import SignIn from "./Pages/Auth/SignUp";
+//import Payment from "./Pages/Payment/Payment";
+//import Orders from "./Pages/Orders/Orders";
+//import Cart from "./Pages/Cart/Cart";
 
 const Header = () => {
   // Moved console.log outside the return
@@ -16,12 +21,12 @@ const Header = () => {
         <div className={classes.header__container}>
           {/* logo */}
           <div className={classes.logo__container}>
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amazon logo"
               />
-            </a>
+            </Link>
             <div className={classes.delivery}>
               {/* delivery */}
               <span>
@@ -40,13 +45,13 @@ const Header = () => {
             <select name="" id="">
               <option value="">All</option>
             </select>
-            <input type="text" name=""  id="" placeholder="search product" />
+            <input type="text" name="" id="" placeholder="search product" />
             <BsSearch size={25} />
           </div>
           {/* right side link */}
           <div>
             <div className={classes.order__container}>
-              <a href="" className={classes.language}>
+              <Link to="" className={classes.language}>
                 <img
                   src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png"
                   alt="US flag"
@@ -55,27 +60,27 @@ const Header = () => {
                 <select name="" id="">
                   <option value="">EN</option>
                 </select>
-              </a>
+              </Link>
 
               {/* three component */}
-              <a href="">
+              <Link to="">
                 <div>
                   <p>sign in</p>
                   <span>Account & Lists</span>
                 </div>
-              </a>
+              </Link>
               {/* orders */}
-              <a href="">
+              <Link to="/Orders">
                 <p>returns</p>
                 <span>& Orders</span>
-              </a>
+              </Link>
               {/* cart */}
 
-              <a href="" className={classes.cart}>
+              <Link to="/Cart" className={classes.cart}>
                 <BiCart size={35} />
                 <span>0</span>
                 <p></p>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
