@@ -37,9 +37,9 @@ function ProductDetail() {
         <Loader />
       ) : (
         <>
-          {console.log(product)}
+        
           {product && (
-            <ProductCard product={product} flex={true} renderDesc={true} />
+            <ProductCard product={product} flex={true} renderDesc={true}  renderAdd={true}/>
           )}
         </>
       )}

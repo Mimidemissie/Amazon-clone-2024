@@ -21,7 +21,6 @@ function Product() {
         setIsLoading(false);
       });
   }, []);
-  console.log(products);
 
   return (
     <>
@@ -31,8 +30,10 @@ function Product() {
         <section className={classes.products_container}>
           {products.map((singleProduct) => (
             <ProductCard
+              renderAdd={true}
               product={singleProduct}
-              // renderDesc={true}
+              //flex={true}
+              //renderDesc={true}
               key={singleProduct.id}
             />
           ))}
